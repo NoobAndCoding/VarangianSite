@@ -2,6 +2,7 @@ html {
     color: white;
     font-family: "flamenco";
     background-color: #3b3b3d ;
+    overflow-x:hidden;
 }
 
 .card {
@@ -305,3 +306,39 @@ tr:nth-child(odd) {
       .modal-overlay.hidden {
         display: none;
       }
+
+      .Gallereh {
+        margin: 0 auto;
+        padding: 2em;
+        background: #1c1f2b;
+        text-align: center;
+        border-radius: 10px;
+        height: 800px;
+        position: relative;
+        margin-top: 10px;
+        width: auto;
+        overflow: scroll;
+    }
+    
+    .Gallereh::after, .card::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: conic-gradient(from var(--angle), transparent 70%, #5e35b1, #f57c00);
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+        padding: 10px;
+        border-radius: 10px;
+        animation: 3s spin linear infinite;
+    }
+
+    .Gallereh > img {
+        display: flex-start;
+    }
+
+    ::-webkit-scrollbar {
+        display:none;
+    }

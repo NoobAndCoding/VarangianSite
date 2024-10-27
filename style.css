@@ -340,5 +340,7 @@ tr:nth-child(odd) {
     }
 
     ::-webkit-scrollbar {
-        display:none;
+        display: none;
+        -ms-overflow-style: none;
+        scrollbar-width: 0;
     }

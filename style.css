@@ -316,23 +316,8 @@ tr:nth-child(odd) {
         border-radius: 10px;
         position: relative;
         width: auto;
-        height: 1000px;
+        height: 900px;;
         overflow: scroll;
-    }
-    
-    .gallereh::after, .gallereh::before {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background: conic-gradient(from var(--angle), transparent 70%, #5e35b1, #f57c00);
-        top: 50%;
-        left: 50%;
-        translate: -50% -50%;
-        z-index: -1;
-        padding: 10px;
-        border-radius: 10px;
-        animation: 7s spin linear infinite; 
     }
 
     ::-webkit-scrollbar {
@@ -392,4 +377,21 @@ tr:nth-child(odd) {
 
     .gallereh img:not(:hover) {
         transition: 1s linear
+    }
+
+    footer {
+        background: #1c1f2b;
+        padding: 20px;
+        text-align: center;
+        color: #f3d9a3;
+        font-size: 1.2em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border-top: 2px solid #e3b23c;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3)
+    }
+
+    footer img {
+        height: 50px;
     }

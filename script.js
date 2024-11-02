@@ -21,3 +21,44 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.classList.add("hidden");
   });
 });
+
+// Get the footer element
+// Get the footer element
+const footer = document.querySelector('footer');
+
+// Initialize variables to track scroll direction
+let lastScrollTop = 0;
+let isHidden = false;
+
+// Add event listener for scroll event
+window.addEventListener('scroll', () => {
+  // Get current scroll position
+  const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Check scroll direction
+  if (currentScrollTop > lastScrollTop && !isHidden) {
+    // Scrolling down, hide the footer
+    footer.classList.add('hide');
+    isHidden = true;
+  } else if (currentScrollTop < lastScrollTop && isHidden) {
+    // Scrolling up, show the footer
+    footer.classList.remove('hide');
+    isHidden = false;
+  }
+
+  // Update last scroll position
+  lastScrollTop = currentScrollTop;
+});
+
+// Add CSS transitions to the footer
+const style = document.createElement('style');
+style.innerHTML = `
+  footer {
+    transition: transform 0.5s ease;
+  }
+
+  footer.hide {
+    transform: translateY(100%);
+  }
+`;
+document.head.appendChild(style);

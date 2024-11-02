@@ -10,14 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Flamenco:wght@300;400&family=Noto+Sans+Cypriot&display=swap" rel="stylesheet">
     <link rel ="website icon" type = "webp" href = "9e9f5edffcaedcfdee3c952715649382.webp">
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-    <script src = "script.js"></script>
 </head>
 <body>
     <section class = "mainSection">
         <div class = "cardMenu">
             <a class = "MenuLinkActive"  id = "MenuLink" href = "#home">Home</a>
-            <a id = "MenuLink" href = "#gallery">Gallery</a>
-            <a id = "MenuLink" href = "#More Information"> More Information</a>
+            <a id = "scrollToGallereh" href = "#gallery">Gallery</a>
+            <a id = "MenuLink" href = "#More Information" onclick = "scrollToGallereh()"> More Information</a>
             <button id = "JoinUs"> JOIN US NOW </button>
         </div>
         <div class = "card">
@@ -76,7 +75,8 @@
                 </tr>
             </table>
         </div>
-        <div class = "Gallereh">
+        <div class = "gallereh-wrapper">
+        <div class = "gallereh" id = "gallereh">
             <img src = "download (4).jpeg"/>
             <img src = "download (4).jpeg"/>
             <img src = "download (4).jpeg"/>
@@ -182,6 +182,8 @@
             <img src = "download (4).jpeg"/>
             <img src = "download (4).jpeg"/>
         </div>
+    </div>
     </section>
+    <script src = "script.js"></script>
 </body>
 </html>

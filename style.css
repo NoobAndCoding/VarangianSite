@@ -1,8 +1,19 @@
-html {
+body {
   color: white;
   font-family: "flamenco";
   background-color: #3b3b3d;
   overflow-x: hidden;
+}
+
+.card2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card1 {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
@@ -64,7 +75,7 @@ html {
   color: #5e35b1;
   font-size: 60px;
   text-transform: uppercase;
-  background-image: linear-gradient(to right ,#5e35b1,#f57c00);
+  background-image: linear-gradient(to right, #5e35b1, #f57c00);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: transparent;
@@ -89,7 +100,8 @@ html {
   text-align: center;
   border-radius: 10px;
   position: relative;
-  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cardMenu::after,
@@ -98,7 +110,12 @@ html {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: conic-gradient(from var(--angle),transparent 70%,#5e35b1,#f57c00);
+  background: conic-gradient(
+    from var(--angle),
+    transparent 70%,
+    #5e35b1,
+    #f57c00
+  );
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -357,16 +374,22 @@ tr:nth-child(odd) {
   border-radius: 10px;
   position: relative;
   width: auto;
-  height: 1000px;
+  height: 1200px;
   overflow: visible;
 }
 
-.gallereh-wrapper::after, .gallereh-wrapper::before {
+.gallereh-wrapper::after,
+.gallereh-wrapper::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
-  background: conic-gradient(from var(--angle),transparent 70%,#5e35b1,#f57c00);
+  background: conic-gradient(
+    from var(--angle),
+    transparent 70%,
+    #5e35b1,
+    #f57c00
+  );
   top: 50%;
   left: 50%;
   translate: -50% -50%;
@@ -400,16 +423,16 @@ tr:nth-child(odd) {
 }
 
 footer {
-  background: #1c1f2b;
-  padding: 20px;
-  text-align: center;
-  color: #f3d9a3;
-  font-size: 1.2em;
-  position: fixed;
-  bottom: 0;
+  background-color: #1c1f2b;
+  border-top: orange solid;
   width: 100%;
-  border-top: 2px solid #e3b23c;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 footer img {

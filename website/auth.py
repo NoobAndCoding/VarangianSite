@@ -57,14 +57,15 @@ def sign_up():
             flash("Your passwords don't match", category = "error")
         
         else:
-            new_user = User(email=email, password = generate_password_hash(password1, method = "scrypt", salt_length=16))
+            new_user = User(email = email, password = generate_password_hash(password1, method = "scrypt", salt_length=16))
             db.session.add(new_user)
             db.session.commit()
             if rememberMeBool is not None:
-                login_user(user = user, remember = True)
+                login_user(user = new_user, remember = True)
+                flash("Account created!", category = "success")
+                return redirect("views.home")
             else:
-                login_user(user = user, remember = False)
-            flash("Account created!", category = "success")
-            return redirect(url_for("views.home"))
-            
+                login_user(user = new_user, remember = False)
+                flash("Account created!", category = "success")
+                return redirect("views.home")
     return render_template('signup.html')

@@ -24,16 +24,25 @@
             background-size: cover;
         }
 
+        .glass-container2 {
+            width: 110rem;
+            height: 90rem;
+            margin-bottom: 2rem;
+        }
         .glass-container {
-            width: 28rem;
-            height: 60rem;
             position: relative;
             z-index: 1;
             background: rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0, 0.1);
-            border-radius: 10px;
-            border: 1px solid #fff;
+            border-radius: 0;
+            border-right: 1px solid #fff;
+            border-left: 1px solid #fff;
         }
+        .glass-container1 {
+            width: 110rem;
+            height: 20rem;
+        }
+
     </style>
 </head>
 
@@ -55,8 +64,21 @@
         </button>
     </div>
     {% endif %} {% endfor %} {% endif %} {% endwith %}
-    <div class="glass-container">
-        
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('signup') }}">SignUp</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="glass-container glass-container2">
+        <h1>TheVarangianSite - Home</h1>
     </div>
 </body>
 

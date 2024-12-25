@@ -61,9 +61,9 @@ def sign_up():
             db.session.add(new_user)
             db.session.commit()
             if rememberMeBool is not None:
-                login_user(email, remember = True)
+                login_user(user = user, remember = True)
             else:
-                login_user(email, remember = False)
+                login_user(user = user, remember = False)
             flash("Account created!", category = "success")
             return redirect(url_for("views.home"))
             

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert {
+            position: absolute !important;
+            width: 100vw !important;
+            bottom: 94vh !important;
+            justify-content: center !important;
+            margin: none !important;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("https://github.com/devression/Login-Form/blob/main/background-image.jpeg?raw=true");
+            background-size: cover;
+        }
+
+        .glass-container {
+            width: 28rem;
+            height: 60rem;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0, 0.1);
+            border-radius: 10px;
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    "error" %}
+    <div class="alert alert-danger alert-dismissable fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">X</span>
+        </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alert-dismissable fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">X</span>
+        </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+    <div class="glass-container">
+        
+    </div>
+</body>
+
+</html>
